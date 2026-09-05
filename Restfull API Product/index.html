@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>RestFull API Products</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Product Manager</h1>
+      <form class="form-control">
+        <input id="name" placeholder="Product name" type="text" required />
+        <input id="image" placeholder="Image URL" type="text" required />
+        <input id="category" placeholder="Category" type="text" required />
+        <input id="price" placeholder="Price" type="text" required />
+        <button id="btn-add" class="btn" type="submit">Add Product</button>
+      </form>
+
+      <div class="list-product" id="list-product">
+        <!-- <div class="product_card">
+          <div class="thumb">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSG2z0S5MBSGfnbxgPGNcg9iDNVAefXVC6UEtu7K_DJw&s=10"
+              alt=""
+            />
+          </div>
+          <div class="body">
+            <h3 class="title">Áo Polo</h3>
+            <p class="category">Category</p>
+            <p class="price">3000$</p>
+
+            <div class="btn-controll">
+              <button class="btn-cta edit">Edit</button>
+              <button class="btn-cta delete">Delete</button>
+            </div>
+          </div>
+        </div> -->
+      </div>
+
+      <div class="loading">
+        <span class="loader"></span>
+      </div>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
