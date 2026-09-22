@@ -1,8 +1,10 @@
 // import CardCategory from "./component/Day 1/CardCategory";
 
+import QuizList from "./component/BT Day 2/React Quiz/QuizList";
+
 // import Menu from "./component/BT Day 2/Pizza/Menu.js";
 
-import ToDoList from "./component/BT Day 2/To Do List/ToDoList";
+// import ToDoList from "./component/BT Day 2/To Do List/ToDoList";
 
 // import Counter from "./component/BT Day 2/Counter/Counter";
 
@@ -17,9 +19,11 @@ function App() {
 
       {/* <Counter></Counter> */}
 
-      <ToDoList></ToDoList>
+      {/* <ToDoList></ToDoList> */}
 
       {/* <Menu></Menu> */}
+
+      <QuizList></QuizList>
     </>
   );
 }
