@@ -1,10 +1,5 @@
 import React, { useState } from "react";
-
-type TToDoItem = {
-  id: number;
-  title: string;
-  isDone: boolean;
-};
+import ToDoItem, { type TToDoItem } from "./ToDoItem";
 
 const ToDoList = (): React.JSX.Element => {
   const [inputValue, setInputValue] = useState<string>("");
@@ -13,7 +8,7 @@ const ToDoList = (): React.JSX.Element => {
 
   const handleAddTodo = (): void => {
     if (!inputValue.trim()) {
-      alert("Fieds cannot be empty!");
+      alert("Fields cannot be empty!");
       return;
     }
 
@@ -68,29 +63,12 @@ const ToDoList = (): React.JSX.Element => {
       {todos.length > 0 && (
         <ul className="mt-10 max-w-99 mx-auto ">
           {todos.map((todo) => (
-            <li
+            <ToDoItem
               key={todo.id}
-              className="flex items-center justify-between mb-5"
-            >
-              <h3 className={`${todo.isDone && "line-through text-gray-400"}`}>
-                {todo.title}
-              </h3>
-              <div className="flex gap-5">
-                <button
-                  onClick={() => handleToogleDone(todo.id)}
-                  className="text-blue-500 hover:underline duration-300 transition-all ease-in-out cursor-pointer p-2 border border-gray-400"
-                >
-                  {todo.isDone ? "Not Done" : "Done"}
-                </button>
-
-                <button
-                  onClick={() => handleDeleteToDo(todo.id)}
-                  className="text-red-500 hover:underline duration-300 transition-all ease-in-out cursor-pointer p-2 border border-gray-400"
-                >
-                  Remove
-                </button>
-              </div>
-            </li>
+              todo={todo}
+              toggleDone={handleToogleDone}
+              deleteToDo={handleDeleteToDo}
+            ></ToDoItem>
           ))}
         </ul>
       )}
